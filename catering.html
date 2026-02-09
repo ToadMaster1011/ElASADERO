@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<!-- Made by Molinas Solutions -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Services - EL ASADERO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ewert&display=swap" rel="stylesheet">
+    <link rel="icon" href="20644.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: #000;
+            color: #fff;
+        }
+
+        .fire {
+            animation: animation 1s ease-in-out infinite alternate;
+            -moz-animation: animation 1s ease-in-out infinite alternate;
+            -webkit-animation: animation 1s ease-in-out infinite alternate;
+            -o-animation: animation 1s ease-in-out infinite alternate;
+        }
+
+        .burn {
+            animation: animation .65s ease-in-out infinite alternate;
+            -moz-animation: animation .65s ease-in-out infinite alternate;
+            -webkit-animation: animation .65s ease-in-out infinite alternate;
+            -o-animation: animation .65s ease-in-out infinite alternate;
+        }
+
+        @keyframes animation {
+            0% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #feec85,
+              -20px -20px 40px #ffae34,
+              20px -40px 50px #ec760c,
+              -20px -60px 60px #cd4606,
+              0 -80px 70px #973716,
+              10px -90px 80px #451b0e;}
+            100% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #fefcc9,
+              -20px -20px 40px #feec85,
+              22px -42px 60px #ffae34,
+              -22px -58px 50px #ec760c,
+              0 -82px 80px #cd4606,
+              10px -90px 80px  #973716;}
+        }
+
+        @-moz-keyframes animation {
+            0% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #feec85,
+              -20px -20px 40px #ffae34,
+              20px -40px 50px #ec760c,
+              -20px -60px 60px #cd4606,
+              0 -80px 70px #973716,
+              10px -90px 80px #451b0e;}
+            100% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #fefcc9,
+              -20px -20px 40px #feec85,
+              22px -42px 60px #ffae34,
+              -22px -58px 50px #ec760c,
+              0 -82px 80px #cd4606,
+              10px -90px 80px  #973716;}
+        }
+
+        @-webkit-keyframes animation {
+            0% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #feec85,
+              -20px -20px 40px #ffae34,
+              20px -40px 50px #ec760c,
+              -20px -60px 60px #cd4606,
+              0 -80px 70px #973716,
+              10px -90px 80px #451b0e;}
+            100% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #fefcc9,
+              -20px -20px 40px #feec85,
+              22px -42px 60px #ffae34,
+              -22px -58px 50px #ec760c,
+              0 -82px 80px #cd4606,
+              10px -90px 80px  #973716;}
+        }
+
+        @-o-keyframes animation {
+            0% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #feec85,
+              -20px -20px 40px #ffae34,
+              20px -40px 50px #ec760c,
+              -20px -60px 60px #cd4606,
+              0 -80px 70px #973716,
+              10px -90px 80px #451b0e;}
+            100% {text-shadow: 0 0 20px #fefcc9,
+              10px -10px 30px #fefcc9,
+              -20px -20px 40px #feec85,
+              22px -42px 60px #ffae34,
+              -22px -58px 50px #ec760c,
+              0 -82px 80px #cd4606,
+              10px -90px 80px  #973716;}
+        }
+
+        header {
+            background: #000;
+            color: white;
+            padding: 0.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 30px;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: 'Ewert', cursive;
+        }
+
+        .logo .brand {
+            position: relative;
+            z-index: 3;
+            display: inline-block;
+            padding: 0 10px;
+            margin-top: 2.5rem;
+        }
+
+        .logo span {
+            color: #ff3333;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff8800;
+        }
+
+        /* Nav Button Style */
+        .nav-apply-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff3333 0%, #ff8800 100%);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(255, 51, 51, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
+            background: linear-gradient(135deg, #ff2222 0%, #ff7700 100%);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), 
+                        url('https://thumbs.dreamstime.com/b/mexican-landscape-5935960.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            max-width: 700px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff3333 0%, #ff8800 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 51, 51, 0.4);
+            background: linear-gradient(135deg, #ff2222 0%, #ff7700 100%);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #000;
+        }
+
+        /* Application Modal Styles */
+        .application-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .application-modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .application-modal-content {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp 0.3s ease;
+            margin: 2rem auto;
+        }
+
+        /* Catering Packages */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .package-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-top: 4px solid #ff3333;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .package-price {
+            font-size: 2rem;
+            color: #ff3333;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .package-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #666;
+        }
+
+        .package-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff3333;
+            font-weight: bold;
+        }
+
+        .package-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #ff3333 0%, #ff8800 100%);
+            color: white;
+            padding: 0.8rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
+        }
+
+        /* Form Section */
+        .form-section {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #000;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff3333;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            grid-column: 1 / -1;
+            padding: 1rem;
+            background: linear-gradient(135deg, #ff3333 0%, #ff8800 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
+        }
+
+        /* Modal Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ff3333;
+            padding-bottom: 1rem;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: #000;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            color: #333;
+        }
+
+        .modal-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .faq-section {
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            display: none;
+            margin-top: 1rem;
+            color: #666;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid #ff3333;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #ff8800;
+        }
+
+        .footer-section p {
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                flex-direction: column;
+                gap: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            nav ul.active {
+                max-height: 300px;
+            }
+
+            nav ul li {
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            nav ul li a {
+                display: block;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+                min-height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <div class="brand"><span class="fire">E</span><span class="burn">L</span> <span class="fire">A</span><span class="burn">S</span><span class="fire">A</span><span class="burn">D</span><span class="fire">E</span><span class="burn">R</span><span class="fire">O</span></div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><button class="nav-apply-btn" onclick="openApplicationModal()">Apply Now</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Catering Services</h1>
+        <p>Let us bring our authentic flavors to your special event</p>
+    </section>
+
+    <!-- Catering Packages -->
+    <section class="content" id="packages">
+        <h2 class="section-title">Our Catering Packages</h2>
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Corporate Lunch</h3>
+                <div class="package-price">From $15/person</div>
+                <ul class="package-features">
+                    <li>Minimum 20 people</li>
+                    <li>Assorted grilled meats</li>
+                    <li>Fresh sides and salads</li>
+                    <li>Beverages included</li>
+                    <!-- Delivery removed -->
+                </ul>
+                <button class="package-btn" onclick="openModal('Corporate Lunch')">Inquire Now</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Private Party</h3>
+                <div class="package-price">From $20/person</div>
+                <ul class="package-features">
+                    <li>Minimum 30 people</li>
+                    <li>Premium meat selection</li>
+                    <li>Gourmet sides & desserts</li>
+                    <li>Full bar service</li>
+                    <!-- Delivery removed -->
+                </ul>
+                <button class="package-btn" onclick="openModal('Private Party')">Inquire Now</button>
+            </div>
+
+            <div class="package-card">
+                <h3>Wedding Catering</h3>
+                <div class="package-price">From $35/person</div>
+                <ul class="package-features">
+                    <li>Custom menu planning</li>
+                    <li>Premium ingredients</li>
+                    <li>Professional staff</li>
+                    <li>Elegant presentation</li>
+                    <li>Complete event service</li>
+                </ul>
+                <button class="package-btn" onclick="openModal('Wedding Catering')">Inquire Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Form -->
+    <section class="form-section" id="contact">
+        <h2>Request a Catering Quote</h2>
+        <form class="form-grid">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" min="20" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event-type">Type of Event</label>
+                <select id="event-type" name="event-type" required>
+                    <option value="">Select an event type</option>
+                    <option value="corporate">Corporate Event</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="birthday">Birthday Party</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="package">Preferred Package</label>
+                <select id="package" name="package" required>
+                    <option value="">Select a package</option>
+                    <option value="corporate">Corporate Lunch</option>
+                    <option value="private">Private Party</option>
+                    <option value="wedding">Wedding Catering</option>
+                    <option value="custom">Custom Menu</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Special Requests or Details</label>
+                <textarea id="message" name="message" placeholder="Tell us about your event..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Quote</button>
+        </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is the minimum number of guests for catering?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    The minimum is 20 guests for our standard packages. For custom events with fewer guests, please contact us directly for a special quote.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer dietary accommodations?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely! We can accommodate vegetarian, vegan, gluten-free, and other dietary requirements. Please mention this in your request form.
+                </div>
+            </div>
+
+            <!-- Delivery FAQ removed -->
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can we customize the menu?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! We offer fully customizable menus. Our chef will work with you to create the perfect menu for your event.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is the advance notice required?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    We recommend booking at least 2 weeks in advance. For larger events or custom requests, please allow 4 weeks if possible.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Application Modal Popup -->
+    <div id="applicationModal" class="application-modal">
+        <div class="application-modal-content">
+            <div class="modal-header">
+                <h2 id="applicationTitle">Join Our Team - Application Form</h2>
+                <button class="close-btn" onclick="closeApplicationModal()">&times;</button>
+            </div>
+            <form class="modal-form" id="applicationForm">
+                <div class="form-group">
+                    <label for="appFullName">Full Name</label>
+                    <input type="text" id="appFullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appEmail">Email Address</label>
+                    <input type="email" id="appEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appPhone">Phone Number</label>
+                    <input type="tel" id="appPhone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appPosition">Position Applying For</label>
+                    <select id="appPosition" name="position" required>
+                        <option value="">Select a position</option>
+                        <option value="chef">Chef</option>
+                        <option value="cook">Cook</option>
+                        <option value="server">Server</option>
+                        <option value="kitchen-staff">Kitchen Staff</option>
+                        <option value="manager">Manager</option>
+                        <!-- Delivery Driver option removed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appExperience">Years of Experience</label>
+                    <input type="number" id="appExperience" name="experience" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appAvailability">Availability</label>
+                    <select id="appAvailability" name="availability" required>
+                        <option value="">Select availability</option>
+                        <option value="full-time">Full-Time</option>
+                        <option value="part-time">Part-Time</option>
+                        <option value="weekends">Weekends Only</option>
+                        <option value="flexible">Flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="appSkills">Key Skills</label>
+                    <textarea id="appSkills" name="skills" placeholder="List your relevant skills and expertise..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="appExperienceDetails">Previous Work Experience</label>
+                    <textarea id="appExperienceDetails" name="experienceDetails" placeholder="Tell us about your relevant work experience..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="appReferences">References</label>
+                    <textarea id="appReferences" name="references" placeholder="Provide contact information for professional references..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="appAdditionalInfo">Additional Information</label>
+                    <textarea id="appAdditionalInfo" name="additionalInfo" placeholder="Anything else you'd like us to know about you?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal Popup -->
+    <div id="packageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Package Inquiry</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <form class="modal-form" id="modalForm">
+                <div class="form-group">
+                    <label for="modalName">Full Name</label>
+                    <input type="text" id="modalName" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalEmail">Email Address</label>
+                    <input type="email" id="modalEmail" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalPhone">Phone Number</label>
+                    <input type="tel" id="modalPhone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalGuests">Number of Guests</label>
+                    <input type="number" id="modalGuests" name="guests" min="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalEventDate">Event Date</label>
+                    <input type="date" id="modalEventDate" name="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="modalPackage">Selected Package</label>
+                    <input type="text" id="modalPackage" name="package" readonly>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h4>📍 Location</h4>
+                    <p>168 N Paw Paw St,<br>Coloma, MI 49038<br>Phone: (269) 202-6023</p>
+                </div>
+                <div class="footer-section">
+                    <h4>🕐 Hours</h4>
+                    <p>Saturday: 10:30 AM - 9 PM<br>Sunday: 10:30 AM - 8 PM<br>Monday: 10:30 AM - 8 PM<br>Tuesday: 10:30 AM - 8:30 PM<br>Wednesday: 10:30 AM - 8:30 PM<br>Thursday: 10:30 AM - 8:30 PM<br>Friday: 9 AM - 9 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>📧 Contact</h4>
+                    <p>Email: hello@elasadero.com<br>Follow us on social media<br>Facebook • Instagram • Twitter</p>
+                </div>
+            </div>
+            <p>&copy; 2026 EL ASADERO. All rights reserved. | Crafted with ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS
+        emailjs.init('wapdNFB-3F2V85ECR'); 
+
+        // Application Modal Functions
+        function openApplicationModal() {
+            const modal = document.getElementById('applicationModal');
+            modal.classList.add('active');
+        }
+
+        function closeApplicationModal() {
+            const modal = document.getElementById('applicationModal');
+            modal.classList.remove('active');
+        }
+
+        // Modal Functions
+        function openModal(packageName) {
+            const modal = document.getElementById('packageModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const packageInput = document.getElementById('modalPackage');
+            
+            modalTitle.textContent = packageName + ' - Inquiry Form';
+            packageInput.value = packageName;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('packageModal');
+            modal.classList.remove('active');
+        }
+
+        // Close modal when clicking outside of it
+        window.addEventListener('click', (event) => {
+            const applicationModal = document.getElementById('applicationModal');
+            const packageModal = document.getElementById('packageModal');
+            if (event.target === applicationModal) {
+                closeApplicationModal();
+            }
+            if (event.target === packageModal) {
+                closeModal();
+            }
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Close menu when Apply Now button is clicked
+        const applyBtn = document.querySelector('.nav-apply-btn');
+        if (applyBtn) {
+            applyBtn.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+                question.querySelector('span:last-child').textContent = 
+                    answer.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Application Form submission with EmailJS
+        document.getElementById('applicationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = {
+                fullName: document.getElementById('appFullName').value,
+                email: document.getElementById('appEmail').value,
+                phone: document.getElementById('appPhone').value,
+                position: document.getElementById('appPosition').value,
+                experience: document.getElementById('appExperience').value,
+                availability: document.getElementById('appAvailability').value,
+                skills: document.getElementById('appSkills').value,
+                experienceDetails: document.getElementById('appExperienceDetails').value,
+                references: document.getElementById('appReferences').value,
+                additionalInfo: document.getElementById('appAdditionalInfo').value
+            };
+
+            emailjs.send(
+                'service_siji5vo',  
+                'template_nqekc9g', 
+                formData,
+                'wapdNFB-3F2V85ECR'  
+            ).then(function(response) {
+                alert('Application submitted successfully! We will review it and contact you soon.');
+                document.getElementById('applicationForm').reset();
+                closeApplicationModal();
+            }, function(error) {
+                alert('Failed to submit application. Please try again. Error: ' + JSON.stringify(error));
+            });
+        });
+
+        // Modal Form submission
+        document.getElementById('modalForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            document.getElementById('modalForm').reset();
+            closeModal();
+        });
+
+        // Main page Form submission
+        const pageForm = document.querySelector('.form-section form');
+        if (pageForm) {
+            pageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you shortly.');
+                pageForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>
